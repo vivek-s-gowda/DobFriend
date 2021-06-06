@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .icon-section {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .input-box {
+    margin-top: 20px;
+    width: 95%;
+  }
+  .button-area{
+    margin-top: 20px;
+    width: 95%;
+  }
+
+  
+  
+}
+
+
