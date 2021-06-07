@@ -30,11 +30,52 @@
     </ion-item>
   </div>
 
+  <div class="two-input-inrow">
+    <div class="input-box">
+      <ion-item class="border-radius">
+        <ion-label position="floating" class="primary-text-color"
+          >Gender</ion-label
+        >
+        <ion-select [(ngModel)]="gender">
+          <ion-option value="f">Female</ion-option>
+          <ion-option value="m">Male</ion-option>
+        </ion-select>
+      </ion-item>
+    </div>
+    <div class="input-box date-picker-size">
+      <ion-item class="border-radius date-picker-height">
+        <ion-label position="floating" class="primary-text-color"
+          >DOB</ion-label
+        >
+        <ion-datetime
+          displayFormat="h:mm A"
+          pickerFormat="h mm A"
+        ></ion-datetime>
+      </ion-item>
+    </div>
+  </div>
+
+  <div class="input-box">
+    <ion-item class="border-radius">
+      <ion-label position="floating" class="primary-text-color"
+        >Facebook link</ion-label
+      >
+      <ion-input></ion-input>
+    </ion-item>
+  </div>
+  <div class="input-box">
+    <ion-item class="border-radius">
+      <ion-label position="floating" class="primary-text-color"
+        >Instagram id (optional)</ion-label
+      >
+      <ion-input></ion-input>
+    </ion-item>
+  </div>
   <div class="button-area button-size">
     <ion-button
       class="full-height secondary-color button-text border-radius"
       expand="block"
-      >LOGIN</ion-button
+      >SIGN UP</ion-button
     >
   </div>
 
@@ -67,7 +108,7 @@
         />
         <defs>
           <linearGradient
-            id="paint0_linear"
+            id="paint0_lineard"
             x1="0"
             y1="0"
             x2="0"
@@ -134,5 +175,5 @@
     </div>
   </div>
 
-  <a (click)="navigate()" class="hyperlink-as-normal-text"> Create an account </a>
+  <a (click)="navigate()" class="hyperlink-as-normal-text"> Login instead </a>
 </div>
