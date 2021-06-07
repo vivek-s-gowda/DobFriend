@@ -1,6 +1,6 @@
 {
 	"appId": "io.ionic.starter",
-	"appName": "mobileApp",
+	"appName": "DOB Friend",
 	"webDir": "www",
 	"bundledWebRuntime": false,
 	"cordova": {
