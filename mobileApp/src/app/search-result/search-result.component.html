@@ -1,0 +1,44 @@
+<div class="container full-size">
+  <div class="scroll">
+    <div *ngFor="let user of userInfo" class="cards border-radius">
+      <div class="profile-pic"></div>
+      <div class="text-container">
+        <div class="name">{{ user.name }}</div>
+        <div class="dob">{{ user.dob }}</div>
+      </div>
+      <div class="like-icon">
+        <svg
+          width="34"
+          height="34"
+          viewBox="0 0 34 34"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M17 30.2458L14.9459 28.3758C7.65004 21.76 2.83337 17.3967 2.83337 12.0417C2.83337 7.67833 6.26171 4.25 10.625 4.25C13.09 4.25 15.4559 5.3975 17 7.21083C18.5442 5.3975 20.91 4.25 23.375 4.25C27.7384 4.25 31.1667 7.67833 31.1667 12.0417C31.1667 17.3967 26.35 21.76 19.0542 28.39L17 30.2458Z"
+            fill="#344955"
+            fill-opacity="0.2"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div (click)="home()" class="outer-white-circle">
+      <div class="inner-circle">
+        <svg
+          width="34"
+          height="34"
+          viewBox="0 0 34 34"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M14.1667 28.3333V19.8333H19.8334V28.3333H26.9167V17H31.1667L17 4.25L2.83337 17H7.08337V28.3333H14.1667Z"
+            fill="white"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
