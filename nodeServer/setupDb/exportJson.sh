@@ -1,0 +1,1 @@
+python3 generateJson.py > users.json

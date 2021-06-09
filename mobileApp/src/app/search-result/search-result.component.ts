@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import data from 'src/assets/json/users.json';
 
 @Component({
   selector: 'app-search-result',
@@ -7,19 +8,19 @@ import { Router } from '@angular/router';
   styleUrls: ['./search-result.component.scss'],
 })
 export class SearchResultComponent implements OnInit {
-  userInfo = [
-    { name: 'Vivek', dob: '30/05/1998', isLiked: false },
-    { name: 'Vivek', dob: '30/05/1998', isLiked: false },
-    { name: 'Vivek', dob: '30/05/1998', isLiked: false },
-    { name: 'Vivek', dob: '30/05/1998', isLiked: false },
-    { name: 'Vivek', dob: '30/05/1998', isLiked: false },
-    { name: 'Vivek', dob: '30/05/1998', isLiked: false },
-  ];
+  userInfo: {
+    name: string;
+    dob: string;
+    fblink: string;
+    instaid: string;
+    month: string;
+    gender: string;
+  }[] = data;
   constructor(private router: Router) {}
 
   ngOnInit() {}
 
-  home(){
-    this.router.navigate(['/login'])
+  home() {
+    this.router.navigate(['/login']);
   }
 }

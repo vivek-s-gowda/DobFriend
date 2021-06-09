@@ -1,6 +1,6 @@
 <div class="container full-size">
   <div class="scroll">
-    <div *ngFor="let user of userInfo" class="cards border-radius">
+    <a [href]="user.fblink" *ngFor="let user of userInfo" class="cards border-radius">
       <div class="profile-pic"></div>
       <div class="text-container">
         <div class="name">{{ user.name }}</div>
@@ -21,7 +21,7 @@
           />
         </svg>
       </div>
-    </div>
+    </a>
   </div>
   <div class="footer">
     <div (click)="home()" class="outer-white-circle">
