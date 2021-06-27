@@ -1,0 +1,25 @@
+<div class="container background-white full-size">
+    <div class="cover-image">
+        <img src="assets/images/download 1.png" alt="" />
+        <div class="display-picture">
+            <img src="assets/images/Ellipse 3.png" alt="" />
+        </div>
+    </div>
+    <div *ngIf="component == 'user'" class="content-area">
+        <div class="username">
+            {{username}}
+        </div>
+    </div>
+    <div class="footer">
+        <div (click)="search()" class="outer-white-circle">
+            <div class="inner-circle">
+                <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M21.9583 19.8333H20.8392L20.4425 19.4508C21.8308 17.8358 22.6667 15.7392 22.6667 13.4583C22.6667 8.3725 18.5442 4.25 13.4583 4.25C8.3725 4.25 4.25 8.3725 4.25 13.4583C4.25 18.5442 8.3725 22.6667 13.4583 22.6667C15.7392 22.6667 17.8358 21.8308 19.4508 20.4425L19.8333 20.8392V21.9583L26.9167 29.0275L29.0275 26.9167L21.9583 19.8333ZM13.4583 19.8333C9.93083 19.8333 7.08333 16.9858 7.08333 13.4583C7.08333 9.93083 9.93083 7.08333 13.4583 7.08333C16.9858 7.08333 19.8333 9.93083 19.8333 13.4583C19.8333 16.9858 16.9858 19.8333 13.4583 19.8333Z"
+            fill="white"
+          />
+        </svg>
+            </div>
+        </div>
+    </div>
+</div>

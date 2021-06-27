@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
 
   constructor(private router:Router) { }
-
+  username: string = "";
   ngOnInit() {}
 
   navigate(){
@@ -17,6 +17,6 @@ export class LoginComponent implements OnInit {
   }
   
   login(){
-    this.router.navigate(['/result'])
+    this.router.navigate(['/user'], { queryParams:{ page:'user', username:this.username}})
   }
 }

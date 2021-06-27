@@ -1,0 +1,25 @@
+<div class="container background-white full-size">
+    <input type="number" class="input-box" [(ngModel)]="date" />
+    <ion-select class="input-box" [(ngModel)]="month" okText="Okay" cancelText="Dismiss">
+        <ion-select-option *ngFor="let item of months; index as i" value="{{ item }}">{{ item }}</ion-select-option>
+    </ion-select>
+    <ion-button [disabled]="date == NaN" (click)="search()" class="secondary-color button-text border-radius button-area" expand="block"><svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M34.875 31.5H33.0975L32.4675 30.8925C34.6725 28.3275 36 24.9975 36 21.375C36 13.2975 29.4525 6.75 21.375 6.75C13.2975 6.75 6.75 13.2975 6.75 21.375C6.75 29.4525 13.2975 36 21.375 36C24.9975 36 28.3275 34.6725 30.8925 32.4675L31.5 33.0975V34.875L42.75 46.1025L46.1025 42.75L34.875 31.5ZM21.375 31.5C15.7725 31.5 11.25 26.9775 11.25 21.375C11.25 15.7725 15.7725 11.25 21.375 11.25C26.9775 11.25 31.5 15.7725 31.5 21.375C31.5 26.9775 26.9775 31.5 21.375 31.5Z"
+        fill="white"
+      />
+    </svg>
+    </ion-button>
+    <div class="footer">
+        <div (click)="home()" class="outer-white-circle">
+            <div class="inner-circle">
+                <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M14.1667 28.3333V19.8333H19.8334V28.3333H26.9167V17H31.1667L17 4.25L2.83337 17H7.08337V28.3333H14.1667Z"
+            fill="white"
+          />
+        </svg>
+            </div>
+        </div>
+    </div>
+</div>

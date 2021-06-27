@@ -7,7 +7,10 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { SearchResultComponent } from './search-result/search-result.component';
+import { SearchComponent } from './search/search.component';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -17,11 +20,23 @@ const routes: Routes = [
     path: 'result',
     component: SearchResultComponent,
   },
+  { path: 'search', component: SearchComponent },
+
+  {
+    path: 'user',
+    component: UserProfileComponent,
+  },
 ];
 @NgModule({
-  declarations: [AppComponent,SearchResultComponent],
+  declarations: [AppComponent, LoginComponent, SearchResultComponent, SearchComponent,UserProfileComponent],
   entryComponents: [],
-  imports: [BrowserModule, CommonModule, IonicModule.forRoot(),RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })],
+  imports: [
+    BrowserModule,
+    CommonModule,
+    IonicModule.forRoot(),
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }),
+    FormsModule,
+  ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })

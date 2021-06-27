@@ -9,104 +9,107 @@
  * https://ionicframework.com/docs/layout/global-stylesheets
  */
 
+
 /* Core CSS required for Ionic components to work properly */
+
 @import "~@ionic/angular/css/core.css";
 
 /* Basic CSS for apps built with Ionic */
+
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
 @import "~@ionic/angular/css/display.css";
 
 /* Optional CSS utils that can be commented out */
+
 @import "~@ionic/angular/css/padding.css";
 @import "~@ionic/angular/css/float-elements.css";
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
-
+@import "./fonts.scss";
 .background-primary {
-  background-color: #344955;
+    background-color: #344955;
 }
 
 .background-secondary {
-  background-color: rgba(52, 73, 85, 0.1);
+    background-color: rgba(52, 73, 85, 0.1);
 }
 
 .background-white {
-  background-color: #ffffff;
+    background-color: #ffffff;
 }
 
 .full-size {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 .border-radius {
-  border-radius: 6px;
+    border-radius: 6px;
 }
 
 .primary-text-color {
-  color: #344955 !important;
+    color: #344955 !important;
 }
 
 .secondary-color {
-  --background: var(--ion-color-secondary);
-  // color: var(--ion-color-favorite-contrast);
+    --background: var(--ion-color-secondary);
+    // color: var(--ion-color-favorite-contrast);
 }
 
 .button-text {
-  color: #ffffff;
+    color: #ffffff;
 }
 
 .button-size {
-  height: 55px;
+    height: 55px;
 }
 
 .full-height {
-  height: 100%;
+    height: 100%;
 }
 
 :root {
-  --ion-color-secondary: #f9aa33;
+    --ion-color-secondary: #f9aa33;
 }
 
 .add-line-between-text {
-  width: 47%;
-  height: 1px;
-  background-color: #ffffff;
-  opacity: 0.4;
+    width: 47%;
+    height: 1px;
+    background-color: #ffffff;
+    opacity: 0.4;
 }
 
 .top-margin {
-  margin-top: 20px;
+    margin-top: 20px;
 }
 
 .line {
-  display: flex;
-  flex-direction: row;
-  width: 95%;
-  .text {
-    color: #ffffff;
-    line-height: 3;
-    margin-left: 15px;
-    margin-right: 15px;
-  }
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    .text {
+        color: #ffffff;
+        line-height: 3;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
 }
 
 .login-with-other {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  .icons {
-      cursor: pointer;
-      margin: 10px;
-  }
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    .icons {
+        cursor: pointer;
+        margin: 10px;
+    }
 }
 
-
-.hyperlink-as-normal-text{
+.hyperlink-as-normal-text {
     margin: 20px;
     color: #ffffff;
     text-decoration: none;

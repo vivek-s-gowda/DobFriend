@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import data from 'src/assets/json/users.json';
 
 @Component({
@@ -15,10 +15,28 @@ export class SearchResultComponent implements OnInit {
     instaid: string;
     month: string;
     gender: string;
-  }[] = data;
-  constructor(private router: Router) {}
+  }[];
+  sub: any;
+  date: number;
+  month: string;
 
-  ngOnInit() {}
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
+
+  ngOnInit() {
+    this.sub = this.activatedRoute.queryParams.subscribe((params) => {
+      this.date = params['date'];
+      this.month = params['month'];
+
+      this.userInfo = data.filter((item) => {
+        if (
+          item.dob.split('/')[0] == String(this.date) &&
+          item.month == this.month
+        ) {
+          return item;
+        }
+      });
+    });
+  }
 
   home() {
     this.router.navigate(['/login']);

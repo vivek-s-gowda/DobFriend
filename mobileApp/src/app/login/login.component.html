@@ -1,48 +1,32 @@
 <div class="container background-primary full-size">
-  <div class="icon-section">
-    <img class="image-size" src="../../assets/images/logo-only.png"/>
-  </div>
-  <div class="input-box">
-    <ion-item class="border-radius">
-      <ion-label position="floating" class="primary-text-color"
-        >Username</ion-label
-      >
-      <ion-input></ion-input>
-    </ion-item>
-  </div>
-  <div class="input-box">
-    <ion-item class="border-radius">
-      <ion-label position="floating" class="primary-text-color"
-        >Password</ion-label
-      >
-      <ion-input type="password"></ion-input>
-    </ion-item>
-  </div>
+    <div class="icon-section">
+        <img class="image-size" src="../../assets/images/logo-only.png" />
+    </div>
+    <div class="input-box">
+        <ion-item class="border-radius">
+            <ion-label position="floating" class="primary-text-color">Username</ion-label>
+            <ion-input [(ngModel)]="username"></ion-input>
+        </ion-item>
+    </div>
+    <div class="input-box">
+        <ion-item class="border-radius">
+            <ion-label position="floating" class="primary-text-color">Password</ion-label>
+            <ion-input type="password"></ion-input>
+        </ion-item>
+    </div>
+    <div class="button-area button-size">
+        <ion-button [disabled]="username == ''" class="full-height secondary-color button-text border-radius" expand="block" (click)="login()">LOGIN</ion-button>
+    </div>
 
-  <div class="button-area button-size">
-    <ion-button
-      class="full-height secondary-color button-text border-radius"
-      expand="block"
-      (click)="login()"
-      >LOGIN</ion-button
-    >
-  </div>
+    <div class="line">
+        <div class="add-line-between-text top-margin"></div>
+        <span class="text">Or</span>
+        <div class="add-line-between-text top-margin"></div>
+    </div>
 
-  <div class="line">
-    <div class="add-line-between-text top-margin"></div>
-    <span class="text">Or</span>
-    <div class="add-line-between-text top-margin"></div>
-  </div>
-
-  <div class="login-with-other">
-    <div class="icons">
-      <svg
-        width="60"
-        height="60"
-        viewBox="0 0 60 60"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+    <div class="login-with-other">
+        <div class="icons">
+            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -69,15 +53,9 @@
           </linearGradient>
         </defs>
       </svg>
-    </div>
-    <div class="icons">
-      <svg
-        width="60"
-        height="60"
-        viewBox="0 0 60 60"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+        </div>
+        <div class="icons">
+            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -121,8 +99,10 @@
           fill="#34A853"
         />
       </svg>
+        </div>
     </div>
-  </div>
 
-  <a (click)="navigate()" class="hyperlink-as-normal-text"> Create an account </a>
+    <a (click)="navigate()" class="hyperlink-as-normal-text">
+    Create an account
+  </a>
 </div>
