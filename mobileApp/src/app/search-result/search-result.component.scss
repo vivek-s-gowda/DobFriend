@@ -46,7 +46,7 @@
       justify-content: space-between;
       align-items: center;
       cursor: pointer;
-      color:#344955;
+      color: #344955;
       text-decoration: none;
       .profile-pic {
         margin-left: 3px;
@@ -81,5 +81,12 @@
         cursor: pointer;
       }
     }
+  }
+
+  .no-data {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 }

@@ -1,6 +1,14 @@
 <div class="container full-size">
   <div class="scroll">
-    <a [href]="user.fblink" *ngFor="let user of userInfo" class="cards border-radius">
+    <div class="no-data" *ngIf="userInfo.length == 0">
+      <ion-button class="secondary-color button-text border-radius button-area" (click)="loadAllData()"> Load All Data </ion-button>
+      <ion-button class="secondary-color button-text border-radius button-area" (click)="findRandom()">  Find - Random  </ion-button>
+    </div>
+    <div
+      *ngFor="let user of userInfo"
+      class="cards border-radius"
+      (click)="getInfo(user)"
+    >
       <div class="profile-pic"></div>
       <div class="text-container">
         <div class="name">{{ user.name }}</div>
@@ -21,7 +29,7 @@
           />
         </svg>
       </div>
-    </a>
+    </div>
   </div>
   <div class="footer">
     <div (click)="home()" class="outer-white-circle">

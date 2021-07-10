@@ -1,0 +1,42 @@
+<div class="container full-size">
+  <div class="header">
+    <img src="assets/images/myDp.jpg" class="display-picture" />
+    <div class="name">Vivek S</div>
+  </div>
+
+  <div class="chat-area">
+    <div
+      *ngFor="let convo of conversation"
+      class="right-chat-ballon"
+      [ngClass]="{
+        'right-chat-ballon': convo.from == 'Vivek',
+        'left-chat-ballon': convo.from == 'Prachi'
+      }"
+    >
+      {{ convo.message }}
+    </div>
+    <!-- <div *ngIf="convo.from == 'Prachi'" class="right-chat-ballon">
+        {{ convo.message }}
+      </div>
+      <div *ngIf="convo.to == 'Vivek'" class="left-chat-ballon">
+        {{ convo.message }}
+      </div> -->
+  </div>
+  <div class="footer">
+    <textarea class="text-area" [(ngModel)]="message"></textarea>
+    <div class="send-button" (click)="send()">
+      <svg
+        width="34"
+        height="34"
+        viewBox="0 0 34 34"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M2.84742 29.75L32.5832 17L2.84742 4.25L2.83325 14.1667L24.0833 17L2.83325 19.8333L2.84742 29.75Z"
+          fill="white"
+        />
+      </svg>
+    </div>
+  </div>
+</div>

@@ -18,8 +18,7 @@
         }
     }
     .content-area {
-        position: fixed;
-        top: 40vh;
+        position: relative;
         .username {
             font-family: "Roboto-regular";
             font-style: normal;
@@ -27,6 +26,15 @@
             font-size: 24px;
             line-height: 28px;
             color: #344955;
+        }
+        .icon-area-parent {
+            display: flex;
+            flex-wrap: wrap;
+            .social-media-buttons {
+                margin-top: 5vh;
+                margin-right: 5vw;
+                font-family: "Roboto-regular";
+            }
         }
     }
     .footer {
@@ -37,7 +45,7 @@
         background-color: #344955;
         align-self: flex-end;
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         .outer-white-circle {
             background-color: #ffffff;
             width: 90px;
@@ -56,6 +64,10 @@
                 justify-content: center;
                 align-items: center;
             }
+        }
+        .icon {
+            align-self: center;
+            cursor: pointer;
         }
     }
 }

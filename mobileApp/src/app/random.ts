@@ -1,0 +1,28 @@
+export class Random {
+  static messages: string[] = [
+    'I’m great or I’m fine',
+    'I’m doing well',
+    'I’ve been doing very well',
+    'My day has been pretty good so far',
+    'Not too bad',
+    'Things are really good',
+    'How are you?',
+    'How are you doing?',
+    'How have you been?',
+    'How’s your day going so far?',
+    'How’s it going?',
+    'How are things?',
+    'Hi',
+    'Hey',
+    'What’s up',
+    'Nice to meet you',
+    'Pleased to meet you',
+    'It’s a pleasure',
+    'Hello',
+    'Good morning',
+    'Good afternoon',
+    'Good evening',
+    'It’s nice to meet you',
+    'It’s a pleasure to meet you',
+  ];
+}

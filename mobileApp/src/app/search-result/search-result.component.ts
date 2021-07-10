@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import data from 'src/assets/json/users.json';
+import {Utilts} from '../utils'
 
 @Component({
   selector: 'app-search-result',
@@ -40,5 +41,28 @@ export class SearchResultComponent implements OnInit {
 
   home() {
     this.router.navigate(['/login']);
+  }
+
+  loadAllData() {
+    this.userInfo = data;
+  }
+
+  findRandom() {
+    // console.log(this.getRandomInt(0,data.length));
+    this.router.navigate(['/user'], {
+      queryParams: {
+        page: 'resultProfile',
+        userInfo: JSON.stringify(data[Utilts.getRandomInt(0,data.length)]),
+      },
+    });
+  }
+
+  getInfo(user) {
+    this.router.navigate(['/user'], {
+      queryParams: {
+        page: 'resultProfile',
+        userInfo: JSON.stringify(user),
+      },
+    });
   }
 }

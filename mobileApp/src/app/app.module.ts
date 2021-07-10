@@ -11,6 +11,7 @@ import { SearchComponent } from './search/search.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import { ChatComponent } from './chat/chat.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -26,9 +27,20 @@ const routes: Routes = [
     path: 'user',
     component: UserProfileComponent,
   },
+  {
+    path: 'chat',
+    component: ChatComponent,
+  },
 ];
 @NgModule({
-  declarations: [AppComponent, LoginComponent, SearchResultComponent, SearchComponent,UserProfileComponent],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    SearchResultComponent,
+    SearchComponent,
+    UserProfileComponent,
+    ChatComponent,
+  ],
   entryComponents: [],
   imports: [
     BrowserModule,
